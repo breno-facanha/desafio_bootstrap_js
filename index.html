@@ -28,12 +28,19 @@
            
         }
 
-        #resultadoSoma{
-            width: 50px;
-            height: 50px;
+        #resultadoSoma {
             text-align: center;
-            padding-top: 13px;
+            margin-top: 13px;
         }
+        
+
+        #soma, #subtracao, #multiplicacao, #divisao {
+            width: 60px;
+            height: 60px;
+            padding-top: 12px;
+           
+        }
+        
 
     </style>
 </head>
@@ -44,7 +51,7 @@
     </div>
     <nav class="d-flex justify-content-evenly align-items-center bg-black ">
         <button class="rounded btn btn-primary" onclick="primeiraSolucao()">1 - Soma entre dois numeros</button>
-        <button class="rounded btn btn-primary">2 - Soma Subtração Multiplicação e Divisão</button>
+        <button class="rounded btn btn-primary" onclick="segundaSolucao()">2 - Soma Subtração Multiplicação e Divisão</button>
         <button class="rounded btn btn-primary">3 - Consumo médio do automovél</button>
         <!-- <a href="">1 - Soma entre dois numeros</a>
         <a href="">2 - Soma Subtração Multiplicação e Divisão</a>
@@ -52,11 +59,13 @@
     </nav>
 
     <div id="resultado" class="central d-flex justify-content-center align-items-center mt-5 flex-column">
+      
 
+       
     </div>
 
     <script>
- 
+    /* pirmeira ativida */
         function primeiraSolucao(){
             document.getElementById("resultado").innerHTML = ``
             document.getElementById("resultado").innerHTML = `
@@ -87,8 +96,65 @@
             const adcClasse = document.getElementById("resultadoSoma")
             adcClasse.className = "mt-3 rounded-5 bg-primary text-white"
         }
+    /* pirmeira ativida */
 
+    /* segunda ativida */
+        function segundaSolucao(){
+            document.getElementById("resultado").innerHTML = ``
+            document.getElementById("resultado").innerHTML = `
+              <div class="d-flex flex-column">
+                <label for="numero1">Digite um numero</label>
+                <input class="form-control mt-1" type="number" id="numero1">
+              </div>
+              <div class="d-flex flex-column mt-4">
+                <label for="numero2">Digite outro numero</label>
+                <input class="form-control mt-1" type="number" id="numero2">
+              </div>
+              <button class="btn btn-primary mt-3" onclick="calculoSegundaSolucao()">
+                Calcular
+              </button>
+             <div id="resultadoSoma" class="d-flex justify-content-center align-items-center flex-column">        
+                <div class="d-flex justify-content-center flex-column align-items-center">
+                    <div id="soma" class="mt-3 rounded-5 bg-primary text-white"></div>
+                    <p>Soma</p>
+                </div>
+                
+                <div class="d-flex justify-content-center flex-column align-items-center">
+                    <div id="subtracao" class="mt-3 rounded-5 bg-primary text-white"></div>
+                    <p>Subtração</p>
+                </div>
+                
+                <div class="d-flex justify-content-center flex-column align-items-center">
+                    <div id="multiplicacao" class="mt-3 rounded-5 bg-primary text-white" ></div>
+                    <p>Multiplicação</p>
+                </div>
+                
+                <div class="d-flex justify-content-center flex-column align-items-center">
+                    <div id="divisao" class="mt-3 rounded-5 bg-primary text-white"></div>
+                    <p>Divisão</p>
+                </div>
+            </div>
+            `    
+             
+        }
 
+        function calculoSegundaSolucao(){
+            let numeroUm = parseFloat(document.getElementById("numero1").value)
+            let numeroDois = parseFloat(document.getElementById("numero2").value)
+            let resultadoSoma = numeroUm + numeroDois 
+            let resultadoSubtracao = numeroUm - numeroDois 
+            let resultadoMultiplicacao = numeroUm * numeroDois 
+            let resultadoDivisao = numeroUm / numeroDois 
+
+            document.getElementById("soma").innerHTML =  resultadoSoma.toFixed(2)
+            document.getElementById("subtracao").innerHTML =  resultadoSubtracao.toFixed(2)
+            document.getElementById("multiplicacao").innerHTML =  resultadoMultiplicacao.toFixed(2)
+            document.getElementById("divisao").innerHTML =  resultadoDivisao.toFixed(2)
+            const adcClasse = document.getElementById("soma")
+            adcClasse.className = "mt-3 rounded-5 bg-primary text-white"
+        }
+    /* pirmeira ativida */
+    
     </script>
 </body>
 </html>
