@@ -38,7 +38,6 @@
             width: 60px;
             height: 60px;
             padding-top: 18px;
-           
         }
         
 
@@ -52,7 +51,7 @@
     <nav class="d-flex justify-content-evenly align-items-center bg-black ">
         <button class="rounded btn btn-primary" onclick="primeiraSolucao()">1 - Soma entre dois numeros</button>
         <button class="rounded btn btn-primary" onclick="segundaSolucao()">2 - Soma Subtração Multiplicação e Divisão</button>
-        <button class="rounded btn btn-primary">3 - Consumo médio do automovél</button>
+        <button class="rounded btn btn-primary" onclick="terceiraSolucao()">3 - Consumo médio do automovél</button>
         <!-- <a href="">1 - Soma entre dois numeros</a>
         <a href="">2 - Soma Subtração Multiplicação e Divisão</a>
         <a href="">3 - Consumo médio do automovél</a> -->
@@ -65,7 +64,7 @@
     </div>
 
     <script>
-    /* pirmeira ativida */
+    /* pirmeira atividade */
         function primeiraSolucao(){
             document.getElementById("resultado").innerHTML = ``
             document.getElementById("resultado").innerHTML = `
@@ -96,9 +95,9 @@
             const adcClasse = document.getElementById("resultadoSoma")
             adcClasse.className = "mt-3 rounded-5 bg-primary text-white"
         }
-    /* pirmeira ativida */
+    /* pirmeira atividade */
 
-    /* segunda ativida */
+    /* segunda atividade */
         function segundaSolucao(){
             document.getElementById("resultado").innerHTML = ``
             document.getElementById("resultado").innerHTML = `
@@ -157,7 +156,27 @@
             const adcClasse = document.getElementById("soma")
             adcClasse.className = "mt-3 rounded-5 bg-primary text-white"
         }
-    /* pirmeira ativida */
+    /* segunda atividade */
+
+    /* terceira atividade */
+        function terceiraSolucao(){
+            document.getElementById("resultado").innerHTML = ``
+            document.getElementById("resultado").innerHTML = `
+              <div class="d-flex flex-column">
+                <label for="numero1">Distância total percorrida</label>
+                <input class="form-control mt-1" type="number" id="numero1">
+              </div>
+              <div class="d-flex flex-column mt-4">
+                <label for="numero2">Total de combustivel gasto</label>
+                <input class="form-control mt-1" type="number" id="numero2">
+              </div>
+              <button class="btn btn-primary mt-3" onclick="calculoSegundaSolucao()">
+                Calcular
+              </button>
+             <div id="resultadoSoma" class="d-flex justify-content-center align-items-center flex-column">        
+                </div>
+            `
+        }
 
     </script>
 </body>
