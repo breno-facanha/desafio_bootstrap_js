@@ -37,7 +37,7 @@
         #soma, #subtracao, #multiplicacao, #divisao {
             width: 60px;
             height: 60px;
-            padding-top: 12px;
+            padding-top: 18px;
            
         }
         
@@ -114,26 +114,7 @@
                 Calcular
               </button>
              <div id="resultadoSoma" class="d-flex justify-content-center align-items-center flex-column">        
-                <div class="d-flex justify-content-center flex-column align-items-center">
-                    <div id="soma" class="mt-3 rounded-5 bg-primary text-white"></div>
-                    <p>Soma</p>
                 </div>
-                
-                <div class="d-flex justify-content-center flex-column align-items-center">
-                    <div id="subtracao" class="mt-3 rounded-5 bg-primary text-white"></div>
-                    <p>Subtração</p>
-                </div>
-                
-                <div class="d-flex justify-content-center flex-column align-items-center">
-                    <div id="multiplicacao" class="mt-3 rounded-5 bg-primary text-white" ></div>
-                    <p>Multiplicação</p>
-                </div>
-                
-                <div class="d-flex justify-content-center flex-column align-items-center">
-                    <div id="divisao" class="mt-3 rounded-5 bg-primary text-white"></div>
-                    <p>Divisão</p>
-                </div>
-            </div>
             `    
              
         }
@@ -145,16 +126,39 @@
             let resultadoSubtracao = numeroUm - numeroDois 
             let resultadoMultiplicacao = numeroUm * numeroDois 
             let resultadoDivisao = numeroUm / numeroDois 
+            document.getElementById("resultadoSoma").innerHTML =  `       
 
+                <div class="d-flex justify-content-center flex-column align-items-center">
+                    <div id="soma" class="mt-3 rounded-5 bg-primary text-white"></div>
+                    <p>Soma</p>
+                </div>
+
+                <div class="d-flex justify-content-center flex-column align-items-center">
+                    <div id="subtracao" class="mt-3 rounded-5 bg-primary text-white"></div>
+                    <p>Subtração</p>
+                </div>
+
+                <div class="d-flex justify-content-center flex-column align-items-center">
+                    <div id="multiplicacao" class="mt-3 rounded-5 bg-primary text-white" ></div>
+                    <p>Multiplicação</p>
+                </div>
+
+                <div class="d-flex justify-content-center flex-column align-items-center">
+                    <div id="divisao" class="mt-3 rounded-5 bg-primary text-white"></div>
+                    <p>Divisão</p>
+                </div>
+                `
             document.getElementById("soma").innerHTML =  resultadoSoma.toFixed(2)
             document.getElementById("subtracao").innerHTML =  resultadoSubtracao.toFixed(2)
             document.getElementById("multiplicacao").innerHTML =  resultadoMultiplicacao.toFixed(2)
             document.getElementById("divisao").innerHTML =  resultadoDivisao.toFixed(2)
+       
+            
             const adcClasse = document.getElementById("soma")
             adcClasse.className = "mt-3 rounded-5 bg-primary text-white"
         }
     /* pirmeira ativida */
-    
+
     </script>
 </body>
 </html>
