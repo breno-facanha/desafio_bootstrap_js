@@ -97,9 +97,14 @@
             let numeroDois = parseFloat(document.getElementById("numero2").value)
             let resultado = numeroUm + numeroDois 
 
-            document.getElementById("resultadoSoma").innerHTML = resultado 
-            const adcClasse = document.getElementById("resultadoSoma")
-            adcClasse.className = "mt-3 rounded-5 bg-primary text-white"
+            document.getElementById("resultadoSoma").innerHTML = `
+             <div class="d-flex justify-content-center flex-column align-items-center">
+                    <div id="media" class="mt-3 rounded-5 bg-primary text-white"></div>
+                    <p>Soma</p>
+            </div>
+            `
+            document.getElementById("media").innerHTML =  resultado.toFixed(2)
+
         }
     /* pirmeira atividade */
 
